@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Display Current Date and Time</title>
+  </head>
+  <body>
+    <button onclick="showDateTime()">Show Date and Time</button>
+    <p id="datetime"></p>
+    <script>
+      function showDateTime() {
+        var currentDate = new Date();
+        var dateString = currentDate.toLocaleDateString();
+        var timeString = currentDate.toLocaleTimeString();
+        var dateTimeString = dateString + " " + timeString;
+        document.getElementById("datetime").innerHTML = dateTimeString;
+      }
+    </script>
+  </body>
+</html>
